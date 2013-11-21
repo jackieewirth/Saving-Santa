@@ -81,7 +81,6 @@ function breakAction ()
   var str = document.getElementById('actionInput').value;
   var downstr = str.toLowerCase ();
   
-  if (downstr === 'go right') {
   
     if (downstr === 'look around') {
     document.getElementById('outputDiv').innerHTML ='You have picked up Sugar Cubes!';
