@@ -1,17 +1,21 @@
-
 <!DOCTYPE html>
 <html><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Saving Santa</title>
 
-<script type="text/javascript" src="game.js"></script>
+<script type="text/javascript" src="santa.js"></script>
+
+<style type="text/css">
+      body { text-align: center; }
+      div { display: none; }
+ </style>
 </head>
 
-<body style="text-align:center">
+<body onload="start ();">
 
 	<p>
 		<h1>SAVING SANTA</h1>
-	<div id="backStory">
+	<div id="page0" style="display: block;">
 		WE NEED YOUR HELP! Santa has been kidnapped with only two days until Christmas!<br>
 	Santa has been missing for two days; a note was found in his home stating: <br>
 	"There will be no Christmas this year if I can not work for Santa in his workshop - <br>
@@ -19,16 +23,7 @@
 	an elf who had just recently been fired from Santa's workshop for constantly eating on <br>
 	the job. We know that Santa is somewhere inside of the Workshop. It is up to YOU, as Santa's <br>
 	first-hand man, to find Santa and save him in time for Christmas! <br>
-   </div>
-   
- <div id="instructions" style="display:none">
-  INSTRUCTIONS: You can either type in 'Look Around', 'Go Right', or 'Go Left'.
-  'Look Around' will have you walk around the room and find objects and pick it up.
-  'Go Right' will move you to the room on the right.
-  'Go Left' will move you to the room on the left.
- </div>
 
-  <div id="inputDiv">
     <p>First, please Enter Your Name:</p>
     <label for="nameBox">Name:</label>
     <input type="text" id="nameBox"> <br>
@@ -40,31 +35,46 @@
    <input type="button" value="Reindeer"
 	onclick="userCreate('Reindeer')";>
    <input type="button" value="Mrs. Claus"
-	onclick="userCreate('Mrs. Claus')";>  
-
-  </div>
-        <hr>
-  
-
-  <div id="outputDiv"></div>
-
-<div id="continue" style="display:none">
-   <input type="button" value="Click to Start the Game!"
+	onclick="userCreate('Mrs. Claus')";>
+	
+</div>
+	
+<div id="button">
+<input type="button" value="Enter"
 	onclick="gameStart()";>
-
 </div>
 
-<div id="actionText" style="display:none">
+<div id="button2">
+<input type="button" value="Next"
+    onclick="nextPage(0)";>
+	
+</div>
+
+
+   <div id="instructions">
+  INSTRUCTIONS: You can either type in 'Look Around', 'Go Right', or 'Go Left'.
+  'Look Around' will have you walk around the room and find objects and pick it up.
+  'Go Right' will move you to the room on the right.
+  'Go Left' will move you to the room on the left.
+ </div>
+
+        <hr>
+  
+<div id="page1">
+
+  <input type="button" value="Click to Start the Game!"
+      onclick="nextPage(1)";>
+</div>
+
+
+
+<div id="page2">
 	<label for="actionInput">What do you want to do?</label>
 	<input id="actionInput" type="text">
 </div>
 
 <div id="enterButton1" style="display:none">
 	<button onclick="roomAction ()">Enter</button>
-</div>
-
-<div id="break" style="display:none">
-    <button onclick="breakAction ()">Enter</button>
 </div>
 
 
