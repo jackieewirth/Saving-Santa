@@ -1,3 +1,23 @@
+function nextPage(curr) {
+      var next, currPage, nextPage;
+
+      next = curr + 1;
+      currPage = document.getElementById('page' + curr);
+      nextPage = document.getElementById('page' + next);
+      
+      currPage.style.display = 'none';
+      nextPage.style.display = 'block';
+      
+      document.getElementById('button2').style.display = 'none';
+      document.getElementById('instructions').style.display = 'block';
+    }
+
+function start() {
+      document.getElementById('page0').style.display = 'block';
+
+    }
+
+
 function RandomInt (low, high)
 {
   return Math.floor(Math.random()*(high-low+1)) + low;
@@ -27,27 +47,25 @@ function userCreate (characterType)
    alert('Please type your name into the textbox!');
     } else {
   
-  document.getElementById('outputDiv').innerHTML =
+  document.getElementById('page0').innerHTML =
     'Hello ' + name + '! Thank you for helping us find Santa! You have chosen to be a ' +
      characterType + '! You will begin your adventure with the ' + itemStart + '!';
+     
+    document.getElementById('button').style.display = 'block';
 
-  document.getElementById('inputDiv').style.display = 'none';
-  document.getElementById('continue').style.display = 'block';
 }
 }
 
 
 function gameStart ()
 {
-  document.getElementById('outputDiv').innerHTML =
+  document.getElementById('page0').innerHTML =
   'You currently have the ' + itemStart +
-  ', and standing in the Assembly Room of Santa\'s workshop. What would you like to do?';
+  ', and standing in the Assembly Room of Santa\'s workshop.';
+  
+   document.getElementById('button').style.display = 'none';
+  document.getElementById('button2').style.display = 'block';
 
- document.getElementById('backStory').style.display = 'none';
- document.getElementById('continue').style.display = 'none';
- document.getElementById('enterButton1').style.display = 'block';
- document.getElementById('instructions').style.display = 'block';
- document.getElementById('actionText').style.display = 'block';
 }
 
 function roomAction ()
@@ -74,29 +92,3 @@ function roomAction ()
    }
   }
  }
-
-
-function breakAction ()
-{
-  var str = document.getElementById('actionInput').value;
-  var downstr = str.toLowerCase ();
-  
-  
-    if (downstr === 'look around') {
-    document.getElementById('outputDiv').innerHTML ='You have picked up Sugar Cubes!';
-    }
-    else {
-       if (downstr === 'go right') {
-    document.getElementById('outputDiv').innerHTML = 'You are now in the Assembly Room.';
-    }
-    else {
-       if (downstr === 'go left') {
-    document.getElementById('outputDiv').innerHTML ='You are now in the Mail Room.';
-    }
-    else {
-    document.getElementById('outputDiv').innerHTML = 'Invalid move.';
-    }
-   }
-  }
- }
-}
