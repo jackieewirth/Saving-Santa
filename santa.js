@@ -75,20 +75,93 @@ function roomAction ()
   
     if (downstr === 'look around') {
     document.getElementById('outputDiv').innerHTML ='You have picked up a Yo-Yo!';
+    document.getElementById('button3').style.display = 'block';
     }
     else {
-       if (downstr === 'go right') {
-    document.getElementById('outputDiv').innerHTML = 'You are now in the Breakroom.';
-    
-    document.getElementById('break').style.display = 'block';
-    }
-    else {
-       if (downstr === 'go left') {
-    document.getElementById('outputDiv').innerHTML ='You are now in the Wrapping Room.';
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv').innerHTML = 'You\'re next destination is the Breakroom; however, you must answer the question correctly in order to move on.';
+    document.getElementById('button4').style.display = 'block';
     }
     else {
     document.getElementById('outputDiv').innerHTML = 'Invalid move.';
     }
    }
   }
- }
+
+function roomAction2 ()
+{
+  var str = document.getElementById('actionInput2').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv2').innerHTML ='You have picked up a Yo-Yo!';
+    }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv2').innerHTML = 'You\'re next destination is the Breakroom; however, you must answer the question correctly in order to move on.';
+        }
+    else {
+    document.getElementById('outputDiv2').innerHTML = 'Invalid move.';
+    }
+   }
+  document.getElementById('button4').style.display = 'block';
+  
+  }
+  
+function problemOne ()
+{
+ var ansOne = document.getElementById('answer1').value;
+ 
+ if(ansOne === '1840') {
+    document.getElementById('outputDiv3').innerHTML =
+    'Great Job! You have now moved into the Breakroom!';
+    
+    document.getElementById('button5').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv3').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
+   }
+  }
+
+
+function roomAction3 ()
+{
+  var str = document.getElementById('actionInput3').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv4').innerHTML ='You have picked up Sugar Cubes!';
+    document.getElementById('button6').style.display = 'block';
+    }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv4').innerHTML = 'You\'re next destination is the Wrapping Room; however, you must answer the question correctly in order to move on.';
+    document.getElementById('button7').style.display = 'block';
+    }
+    else {
+    document.getElementById('outputDiv4').innerHTML = 'Invalid move.';
+    }
+   }
+  }
+
+
+function roomAction4 ()
+{
+  var str = document.getElementById('actionInput4').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv5').innerHTML ='You have picked up Sugar Cubes!';    
+    
+        }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv5').innerHTML = 'You\'re next destination is the Wrapping Room; however, you must answer the question correctly in order to move on.';
+      }
+    else {
+    document.getElementById('outputDiv5').innerHTML = 'Invalid move.';
+    }
+   }
+   document.getElementById('button7').style.display = 'block';
+  }
