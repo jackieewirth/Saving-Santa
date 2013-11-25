@@ -31,7 +31,7 @@ function RandomOneOf (list)
 
 function item ()
 {
- return RandomOneOf (['Yo-Yo', 'Wrapping Paper', 'Sugar Cubes']);
+ return RandomOneOf (['Tinsel', 'String of Lights', 'Cookies']);
 }
 
 
@@ -183,6 +183,14 @@ function problemTwo ()
   }
   
   
+  
+function itemChooser (chosen, used)
+{
+  document.getElementById('guards1').innerHTML = 'You have chosen the ' + chosen +
+                                                  ' to use against the guards and have' + used +
+                                                  '! You have defeated them and will move on to the next room, the Ice Rink';
+ }
+  
    
 function roomAction5 ()
 {
@@ -195,15 +203,27 @@ function roomAction5 ()
     }    
     else {
        if (downstr === 'next room') {
-    document.getElementById('outputDiv7').innerHTML = 'You\'re next destination is the Ice Rink; however, you must answer the question correctly in order to move on.';
-    document.getElementById('button10').style.display = 'block';    
+    document.getElementById('outputDiv7').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
+                                                      'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
+                                                      
+          if (item () === 'Tinsel') {
+              document.getElementById('Tinsel').style.display = 'block';
+          } else {
+          if (item () === 'String of Lights') {
+               document.getElementById('Lights').style.display = 'block';
+          } else {
+          if (item () === 'Cookies') {
+               document.getElementById('Cookies').style.display = 'block';
+           }
+          }
+        }                                                         
     }
     else {
     document.getElementById('outputDiv7').innerHTML = 'Invalid move.';
     }
    }
-  
   }
+ 
  
 function roomAction6 ()
 {
@@ -212,18 +232,31 @@ function roomAction6 ()
   
     if (downstr === 'look around') {
     document.getElementById('outputDiv8').innerHTML ='You have picked up Wrapping Paper!';
-    }
-    else {
+    } else {
        if (downstr === 'next room') {
-    document.getElementById('outputDiv8').innerHTML = 'You\'re next destination is the Ice Rink; however, you must answer the question correctly in order to move on.';
+    document.getElementById('outputDiv8').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
+                                                      'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
+                                                             
+          if (item () === 'Tinsel') {
+              document.getElementById('Tinsel').style.display = 'block';
+           } else {   
+          if (item () === 'String of Lights') {
+               document.getElementById('Lights').style.display = 'block';
+           } else {
+          if (item () === 'Cookies') {
+               document.getElemetnById('Cookies').style.display = 'block';
+              }
+            }
         }
-    else {
+      } else {
     document.getElementById('outputDiv8').innerHTML = 'Invalid move.';
     }
    }
   document.getElementById('button10').style.display = 'block';
-  
   }
+
+  
+  
   
 function problemThree ()
 {
@@ -242,15 +275,6 @@ function problemThree ()
    }
   }  
   
-
-
-
-
-
-
-
-
-
 
 
 
