@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html><head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Saving Santa</title>
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Saving Santa</title>
 
-<script type="text/javascript" src="santa.js"></script>
+    <script type="text/javascript" src="santa.js"></script>
 
-<style type="text/css">
-      body { text-align: center; }
-      div { display: none; }
- </style>
+      <style type="text/css">
+          body { text-align: center; }
+          div { display: none; }
+      </style>
 </head>
 
 <body onload="start ();">
 
         <p>
                 <h1>SAVING SANTA</h1>
-        <div id="page0" style="display: block;">
+ <div id="page0" style="display: block;">
                 WE NEED YOUR HELP! Santa has been kidnapped with only two days until Christmas!<br>
         Santa has been missing for two days; a note was found in his home stating: <br>
         "There will be no Christmas this year if I can not work for Santa in his workshop - <br>
@@ -27,266 +27,268 @@
     <p>First, please Enter Your Name:</p>
     <label for="nameBox">Name:</label>
     <input type="text" id="nameBox"> <br>
-<br>
-  Now, choose what type of a character you want to be: <br>
+        <br>
+    Now, choose what type of a character you want to be: <br>
 
-   <input type="button" value="Elf"
-        onclick="userCreate('Elf')";>
-   <input type="button" value="Reindeer"
-        onclick="userCreate('Reindeer')";>
-   <input type="button" value="Mrs. Claus"
-        onclick="userCreate('Mrs. Claus')";>
+      <input type="button" value="Elf"
+            onclick="userCreate('Elf')";>
+      <input type="button" value="Reindeer"
+            onclick="userCreate('Reindeer')";>
+      <input type="button" value="Mrs. Claus"
+            onclick="userCreate('Mrs. Claus')";></div>
         
-</div>
+      <div id="button">
+        <input type="button" value="Enter"
+              onclick="gameStart()";>
+       </div>
+
+      <div id="button2">
+        <input type="button" value="Next"
+              onclick="nextPage(0)";>
         
-<div id="button">
-<input type="button" value="Enter"
-        onclick="gameStart()";>
-</div>
-
-<div id="button2">
-<input type="button" value="Next"
-    onclick="nextPage(0)";>
-        
-</div>
+      </div>
 
 
-   <div id="instructions">
-  INSTRUCTIONS: You can either type in 'Look Around' or 'Next Room'.
-  'Look Around' will have you walk around the room and find objects and pick it up.
-  'Next Room' will have you move on to the next room.
- </div>
+      <div id="instructions">
+      INSTRUCTIONS: You can either type in 'Look Around' or 'Next Room'.
+      'Look Around' will have you walk around the room and find objects and pick it up.
+      'Next Room' will have you move on to the next room.
+      </div>
 
         <hr>
   
-<div id="page1">
+    <div id="page1">
 
-  <input type="button" value="Click to Start the Game!"
-      onclick="nextPage(1)";>
-</div>
+        <input type="button" value="Click to Start the Game!"
+                onclick="nextPage(1)";>
+    </div>
 
 
-<div id="page2">
-        <label for="actionInput">What do you want to do?</label>
-        <input id="actionInput" type="text">
-        <button onclick="roomAction ()">Enter</button>
-</div>
+      <div id="page2">
+          <label for="actionInput">What do you want to do?</label>
+          <input id="actionInput" type="text">
+          <button onclick="roomAction ()">Enter</button>
+      </div>
 
-<div id="outputDiv" style="display:block">
-</div>
+            <div id="outputDiv" style="display:block"></div>
 
-<div id="button3">
-  <label for="actionInput2">What do you want to do next?</label>
-        <input id="actionInput2" type="text">
-        <button onclick="roomAction2 ()">Enter</button>
-</div>
+            <div id="button3">
+                <label for="actionInput2">What do you want to do next?</label>
+                <input id="actionInput2" type="text">
+                <button onclick="roomAction2 ()">Enter</button>
+            </div>
 
   
-<div id="outputDiv2" style="display:block">
-</div>
+              <div id="outputDiv2" style="display:block"></div>
 
-<div id="button4">
-  <button onclick="nextPage(2);
-                  document.getElementById('outputDiv').style.display = 'none';
-                  document.getElementById('outputDiv2').style.display = 'none';
-                  document.getElementById('button3').style.display = 'none';
-                  document.getElementById('button4').style.display = 'none';">Next</button>
-  </div>
+            <div id="button4">
+                <button onclick="nextPage(2);
+                          document.getElementById('outputDiv').style.display = 'none';
+                          document.getElementById('outputDiv2').style.display = 'none';
+                          document.getElementById('button3').style.display = 'none';
+                          document.getElementById('button4').style.display = 'none';">Next</button>
+            </div>
 
-<div id="page3">
-  <p> The Elves were making toys in preparation for Christmas! But after they made 500 toys, <br>
-      the machine broke! Oh no! They have to make at leas 2340 toys before Christmas! How many <br>
-      toys do they still have to make?</p>
+      <div id="page3">
+        <p> The Elves were making toys in preparation for Christmas! But after they made 500 toys, <br>
+            the machine broke! Oh no! They have to make at leas 2340 toys before Christmas! How many <br>
+            toys do they still have to make?</p>
       
-  <input id="answer1" type="text">
-  <button onclick="problemOne ()">Enter</button>
-      <div id="outputDiv3" style="display:block">
+              <input id="answer1" type="text">
+              <button onclick="problemOne ()">Enter</button>
+          <div id="outputDiv3" style="display:block"></div>
+      
+      
+            <div id="button5">
+            <button onclick="nextPage(3)">Continue</button>
+            </div>
+ 
       </div>
-      
-      
- <div id="button5">
- <button onclick="nextPage(3)">Continue</button>
- </div>
- 
- </div>
 
-<div id="page4">
 
-<p> You are now standing in the Breakroom of Santa's Workshop! <br>
-     You are one step closer to finding Santa! What do you want to do now? <br> </p>
+      <div id="page4">
+
+         <p> You are now standing in the Breakroom of Santa's Workshop! This is where the tired workers take their <br>
+              breaks, relax, and have a snack. It is a small room, but of course decorated from floor to ceiling in Christmas lights and decorations! <br>
+              You are one step closer to finding Santa! What do you want to do now? <br> </p>
      
- <input id="actionInput3" type="text">
- <button onclick="roomAction3 ();">Enter</button>
+              <input id="actionInput3" type="text">
+              <button onclick="roomAction3 ();">Enter</button>
  
- <div id="outputDiv4" style="display:block">
- </div>
+          <div id="outputDiv4" style="display:block"></div>
 
-<div id="button6">
-  <label for="actionInput4">What do you want to do next?</label>
-        <input id="actionInput4" type="text">
-        <button onclick="roomAction4 ()">Enter</button>
-</div>
+          <div id="button6">
+              <label for="actionInput4">What do you want to do next?</label>
+               <input id="actionInput4" type="text">
+                <button onclick="roomAction4 ()">Enter</button>
+          </div>
 
-<div id="outputDiv5" style="display:block">
-</div>
+          <div id="outputDiv5" style="display:block"></div>
 
-<div id="button7">
-  <button onclick="nextPage(4);
-                  document.getElementById('outputDiv4').style.display = 'none';
-                  document.getElementById('outputDiv5').style.display = 'none';
-                  document.getElementById('button6').style.display = 'none';
-                  document.getElementById('button7').style.display = 'none';">Next</button>
-  </div>
+          <div id="button7">
+                <button onclick="nextPage(4);
+                      document.getElementById('outputDiv4').style.display = 'none';
+                      document.getElementById('outputDiv5').style.display = 'none';
+                      document.getElementById('button6').style.display = 'none';
+                      document.getElementById('button7').style.display = 'none';">Next</button>
+          </div>
 
-</div>
-
-<div id="page5">
-  <p> You have 45 yards of ribbon for your Christmas gift boxes. Each box gets the same amount of ribbon <br>
-      How much ribbon will each of your 15 gift boxes get? <br> </p>
-  <input id="answer2" type="text">
-  <button onclick="problemTwo ()">Enter</button>
-      <div id="outputDiv6" style="display:block">
       </div>
+
+      <div id="page5">
       
-  <div id="outputDiv6" style="display:block"></div>   
- <div id="button8">
- <button onclick="nextPage(5)">Continue</button>
- </div>
- </div>
- 
- 
- 
- 
- <div id="page6">
-
-<p> You are now standing in the Wrapping Room of Santa's Workshop! <br>
-     You are one step closer to finding Santa! What do you want to do now? <br> </p>
-     
- <input id="actionInput5" type="text">
- <button onclick="roomAction5 ();">Enter</button>
- 
- <div id="outputDiv7" style="display:block">
- </div>
-
-<div id="button9">
-  <label for="actionInput6">What do you want to do next?</label>
-        <input id="actionInput6" type="text">
-        <button onclick="roomAction6 ()">Enter</button>
-</div>
-
-<div id="outputDiv8" style="display:block">
-</div>
-
-<div id="button10">
-  <button onclick="nextPage(6);
-                  document.getElementById('outputDiv7').style.display = 'none';
-                  document.getElementById('outputDiv8').style.display = 'none';
-                  document.getElementById('button9').style.display = 'none';
-                  document.getElementById('button10').style.display = 'none';">Next</button>
-  </div>
-
-</div>
-
-
-<div id="page7">
-  <p> Santa is taller then Noel but shorter then Buddy and Gabriel. Buddy is shorter then Gabriel. <br>
-      Holly is shorter then Noel. Who is the shortest? <br> </p>
-  <input id="answer3" type="text">
-  <button onclick="problemThree ()">Enter</button>
-      <div id="outputDiv9" style="display:block">
+          <p> You have 45 yards of ribbon for your Christmas gift boxes. Each box gets the same amount of ribbon <br>
+            How much ribbon will each of your 15 gift boxes get? <br> </p>
+  
+              <input id="answer2" type="text"> <p> yards </p>
+              <button onclick="problemTwo ()">Enter</button>
+              
+            <div id="outputDiv6" style="display:block"></div>
+        
+            <div id="button8">
+                <button onclick="nextPage(5)">Continue</button>
+            </div>
       </div>
-      
-  <div id="outputDiv10" style="display:block"></div>   
- <div id="button11">
- <button onclick="nextPage(7)">Continue</button>
- </div>
- </div>
+  
  
- 
- 
- 
- 
+      <div id="page6">
 
- <div id="page8">
-
-<p> You are now standing in the Ice Rink of Santa's Workshop! <br>
-     You are one step closer to finding Santa! What do you want to do now? <br> </p>
+         <p> You are now standing in the Wrapping Room of Santa's Workshop! Here is where all of the toys are wrapped perfectly <br>
+              before being loaded onto Santa's sleigh and taken to children around the world. What do you want to do now? <br> </p>
      
- <input id="actionInput7" type="text">
- <button onclick="roomAction7 ();">Enter</button>
+          <input id="actionInput5" type="text">
+          <button onclick="roomAction5 ();">Enter</button>
  
- <div id="outputDiv11" style="display:block">
- </div>
+            <div id="outputDiv7" style="display:block"></div>
+            
+                    <div id="Tinsel">
+                        <button onclick="itemChooser('tinsel', 'covered them in tinsel so they can not see')";>Tinsel</button>
+                    </div>
+              
+                    <div id="Lights">
+                        <button onclick="itemChooser('lights', 'wrapped the guards up with lightning speed')";>Lights</button>
+                    </div>
+                  
+                    <div id="Cookies">
+                        <button onclick="itemChooser('cookies', 'made a trail of cookies to lead them from the door')";>Cookies</button>
+                    </div>
+                    
+                    <div id="guards1" style="display:block"></div>
 
-<div id="button12">
-  <label for="actionInput8">What do you want to do next?</label>
-        <input id="actionInput8" type="text">
-        <button onclick="roomAction8 ()">Enter</button>
-</div>
+              <div id="button9">
+                <label for="actionInput6">What do you want to do next?</label>
+                <input id="actionInput6" type="text">
+                <button onclick="roomAction6 ()">Enter</button>
+              </div>
 
-<div id="outputDiv12" style="display:block">
-</div>
+             <div id="outputDiv8" style="display:block"></div>
 
-<div id="button13">
-  <button onclick="nextPage(8);
-                  document.getElementById('outputDiv11').style.display = 'none';
-                  document.getElementById('outputDiv12').style.display = 'none';
-                  document.getElementById('button12').style.display = 'none';
-                  document.getElementById('button13').style.display = 'none';">Next</button>
-  </div>
+             <div id="button10">
+                <button onclick="nextPage(6);
+                      document.getElementById('outputDiv7').style.display = 'none';
+                      document.getElementById('outputDiv8').style.display = 'none';
+                      document.getElementById('button9').style.display = 'none';
+                      document.getElementById('button10').style.display = 'none';">Next</button>
+              </div>
 
-</div>
-
-<div id="page9">
-  <p> Santa drove his sleigh 50 miles per hour for a certain distance to deliever his presesnts to the kids <br>
-      in New York City. He then drove 60 miles per hour for the same distance. What is the average speed for <br>
-      the whole trip? <br> </p>
-  <input id="answer4" type="text">
-  <button onclick="problemFour ()">Enter</button>
-      <div id="outputDiv13" style="display:block">
       </div>
+
+
+      <div id="page7">
       
-  <div id="outputDiv14" style="display:block"></div>   
- <div id="button14">
- <button onclick="nextPage(9)">Continue</button>
- </div>
- </div>
+          <p> Santa is taller then Noel but shorter then Buddy and Gabriel. Buddy is shorter then Gabriel. <br>
+              Holly is shorter then Noel. Who is the shortest? <br> </p>
+              
+          <input id="answer3" type="text">
+          <button onclick="problemThree ()">Enter</button>
+          
+            <div id="outputDiv9" style="display:block"></div>
+      
+            <div id="outputDiv10" style="display:block"></div>   
+            
+            <div id="button11">
+                  <button onclick="nextPage(7)">Continue</button>
+            </div>
+        </div>
+ 
+ 
+ 
+      <div id="page8">
 
-
-
-
-
-
-<div id="page10">
-
-<p> You are now standing in the Mail Room of Santa's Workshop! <br>
-     You are one step closer to finding Santa! What do you want to do now? <br> </p>
+          <p> You are now standing in the Ice Rink of Santa's Workshop! Of course it is absolutely freezing in here! <br>
+               This is where the workers go after they are done working and want to have some fun! What do you want to do now? <br> </p>
      
- <input id="actionInput9" type="text">
- <button onclick="roomAction9 ();">Enter</button>
+            <input id="actionInput7" type="text">
+            <button onclick="roomAction7 ();">Enter</button>
  
- <div id="outputDiv15" style="display:block">
- </div>
+            <div id="outputDiv11" style="display:block"></div>
 
-<div id="button15">
-  <label for="actionInput10">What do you want to do next?</label>
-        <input id="actionInput10" type="text">
-        <button onclick="roomAction10 ()">Enter</button>
-</div>
+            <div id="button12">
+                <label for="actionInput8">What do you want to do next?</label>
+                <input id="actionInput8" type="text">
+                <button onclick="roomAction8 ()">Enter</button>
+            </div>
 
-<div id="outputDiv16" style="display:block">
-</div>
+            <div id="outputDiv12" style="display:block"></div>
 
-<div id="button16">
-  <button onclick="nextPage(10);
-                  document.getElementById('outputDiv15').style.display = 'none';
-                  document.getElementById('outputDiv16').style.display = 'none';
-                  document.getElementById('button15').style.display = 'none';
-                  document.getElementById('button16').style.display = 'none';">Next</button>
-  </div>
+            <div id="button13">
+                  <button onclick="nextPage(8);
+                      document.getElementById('outputDiv11').style.display = 'none';
+                      document.getElementById('outputDiv12').style.display = 'none';
+                      document.getElementById('button12').style.display = 'none';
+                      document.getElementById('button13').style.display = 'none';">Next</button>
+            </div>
+      </div>
 
-</div>
+
+      <div id="page9">
+      
+          <p> Santa drove his sleigh 50 miles per hour for a certain distance to deliever his presesnts to the kids <br>
+              in New York City. He then drove 60 miles per hour for the same distance. What is the average speed for <br>
+              the whole trip? <br> </p>
+            
+        <input id="answer4" type="text"> <p> miles per hour </p>
+        <button onclick="problemFour ()">Enter</button>
+        
+          <div id="outputDiv13" style="display:block"></div>
+      
+          <div id="outputDiv14" style="display:block"></div> 
+            
+          <div id="button14">
+               <button onclick="nextPage(9)">Continue</button>
+          </div>
+      </div>
+
+
+
+      <div id="page10">
+
+          <p> You are now standing in the Mail Room of Santa's Workshop! <br>
+              What do you want to do now? <br> </p>
+     
+            <input id="actionInput9" type="text">
+            <button onclick="roomAction9 ();">Enter</button>
+ 
+            <div id="outputDiv15" style="display:block"></div>
+
+            <div id="button15">
+                <label for="actionInput10">What do you want to do next?</label>
+                <input id="actionInput10" type="text">
+                <button onclick="roomAction10 ()">Enter</button>
+            </div>
+
+            <div id="outputDiv16" style="display:block"></div>
+
+            <div id="button16">
+                  <button onclick="nextPage(10);
+                          document.getElementById('outputDiv15').style.display = 'none';
+                          document.getElementById('outputDiv16').style.display = 'none';
+                          document.getElementById('button15').style.display = 'none';
+                          document.getElementById('button16').style.display = 'none';">Next</button>
+            </div>
+      </div>
+ 
+ 
  
  </div>
-
 </body></html>
