@@ -164,4 +164,197 @@ function roomAction4 ()
     }
    }
    document.getElementById('button7').style.display = 'block';
+   }
+   
+function problemTwo ()
+{
+ var ansOne = document.getElementById('answer2').value;
+ 
+ if(ansOne === '3') {
+    document.getElementById('outputDiv6').innerHTML =
+    'Great Job! You have now moved into the Wrapping Room!';
+    
+    document.getElementById('button8').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv6').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
+   }
   }
+  
+  
+   
+function roomAction5 ()
+{
+  var str = document.getElementById('actionInput5').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv7').innerHTML ='You have picked up Wrapping Paper!';
+    document.getElementById('button9').style.display = 'block';
+    }    
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv7').innerHTML = 'You\'re next destination is the Ice Rink; however, you must answer the question correctly in order to move on.';
+    document.getElementById('button10').style.display = 'block';    
+    }
+    else {
+    document.getElementById('outputDiv7').innerHTML = 'Invalid move.';
+    }
+   }
+  
+  }
+ 
+function roomAction6 ()
+{
+  var str = document.getElementById('actionInput6').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv8').innerHTML ='You have picked up Wrapping Paper!';
+    }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv8').innerHTML = 'You\'re next destination is the Ice Rink; however, you must answer the question correctly in order to move on.';
+        }
+    else {
+    document.getElementById('outputDiv8').innerHTML = 'Invalid move.';
+    }
+   }
+  document.getElementById('button10').style.display = 'block';
+  
+  }
+  
+function problemThree ()
+{
+ var ansOne = document.getElementById('answer3').value;
+ var downstr = ansOne.toLowerCase ();
+ 
+ if(downstr === 'holly') {
+    document.getElementById('outputDiv9').innerHTML =
+    'Great Job! You have now moved to the Ice Rink!';
+    
+    document.getElementById('button11').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv9').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
+   }
+  }  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+function roomAction7 ()
+{
+  var str = document.getElementById('actionInput7').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv11').innerHTML ='You have picked up Hot Chocolate!';
+    document.getElementById('button12').style.display = 'block';
+    }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv11').innerHTML = 'You\'re next destination is the Mail Room; however, you must answer the question correctly in order to move on.';
+    document.getElementById('button13').style.display = 'block';
+    }
+    else {
+    document.getElementById('outputDiv11').innerHTML = 'Invalid move.';
+    }
+   }
+  }
+
+
+function roomAction8 ()
+{
+  var str = document.getElementById('actionInput8').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv12').innerHTML ='You have picked up Hot Chocolate!';    
+    
+        }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv12').innerHTML = 'You\'re next destination is the Mail Room; however, you must answer the question correctly in order to move on.';
+      }
+    else {
+    document.getElementById('outputDiv12').innerHTML = 'Invalid move.';
+    }
+   }
+   document.getElementById('button13').style.display = 'block';
+   }
+   
+function problemFour ()
+{
+ var ansOne = document.getElementById('answer4').value;
+ 
+ if(ansOne === '55') {
+    document.getElementById('outputDiv13').innerHTML =
+    'Great Job! You have now moved to the Mail Room!';
+    
+    document.getElementById('button14').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv13').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
+   }
+  } 
+ 
+ 
+ 
+ 
+ 
+ function roomAction9 ()
+{
+  var str = document.getElementById('actionInput9').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv15').innerHTML ='You have picked up a Letter!';
+    document.getElementById('button15').style.display = 'block';
+    }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv15').innerHTML = 'You\'re next destination is Santa\'s Office; however, you must answer the question correctly in order to move on.';
+    document.getElementById('button16').style.display = 'block';
+    }
+    else {
+    document.getElementById('outputDiv15').innerHTML = 'Invalid move.';
+    }
+   }
+  }
+
+
+function roomAction10 ()
+{
+  var str = document.getElementById('actionInput10').value;
+  var downstr = str.toLowerCase ();
+  
+    if (downstr === 'look around') {
+    document.getElementById('outputDiv16').innerHTML ='You have picked up a Letter!';    
+    
+        }
+    else {
+       if (downstr === 'next room') {
+    document.getElementById('outputDiv16').innerHTML = 'You\'re next destination is Santa\'s Office; however, you must answer the question correctly in order to move on.';
+      }
+    else {
+    document.getElementById('outputDiv16').innerHTML = 'Invalid move.';
+    }
+   }
+   document.getElementById('button16').style.display = 'block';
+   }
+  
+  
