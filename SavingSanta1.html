@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html><head>
+
           <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>Saving Santa</title>
 
     <script type="text/javascript" src="santa.js"></script>
@@ -144,6 +146,8 @@
                           document.getElementById('button6').style.display = 'none';
                           document.getElementById('button7').style.display = 'none';
 			  document.getElementById('choice2').style.display = 'none';">Yes</button>
+			
+
 			<button onclick="document.getElementById('choice2').innerHTML =
 					'There is nothing more for you to do; you have spent too much time ' +
 					'in this room and have been captured by the guards!';">No</button>
@@ -272,6 +276,8 @@
         </div>
  
  
+
+
  
       <div id="page8">
 
@@ -291,6 +297,19 @@
 
             <div id="outputDiv12" style="display:block"></div>
 
+		<div id="choice4">
+			<button onclick="nextPage(8);
+			        document.getElementById('outputDiv11').style.display = 'none';
+                          	document.getElementById('outputDiv12').style.display = 'none';
+	                        document.getElementById('button12').style.display = 'none';
+                                document.getElementById('button13').style.display = 'none';
+	                        document.getElementById('choice4').style.display = 'none';">Yes</button>
+
+			<button onclick="document.getElementById('choice4').innerHTML =
+					'There is nothing more for you to do; you have spent too much time ' +
+					'in this room and have been captured by the guards!';">No</button>
+		</div>
+
             <div id="button13">
                   <button onclick="nextPage(8);
                       document.getElementById('outputDiv11').style.display = 'none';
@@ -299,6 +318,8 @@
                       document.getElementById('button13').style.display = 'none';">Next</button>
             </div>
       </div>
+
+
 
 
       <div id="page9">
