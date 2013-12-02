@@ -94,17 +94,19 @@ function roomAction2 ()
   var downstr = str.toLowerCase ();
   
     if (downstr === 'look around') {
-    document.getElementById('outputDiv2').innerHTML ='You have picked up a Yo-Yo!';
-    }
+    document.getElementById('outputDiv2').innerHTML ='You have already picked up a Yo-Yo, and there is nothing else in the room. Would you like to go to the next room?';
+    document.getElementById('choice1').style.display = 'block';
+
+     }
     else {
        if (downstr === 'next room') {
     document.getElementById('outputDiv2').innerHTML = 'You\'re next destination is the Breakroom; however, you must answer the question correctly in order to move on.';
-        }
+         document.getElementById('button4').style.display = 'block';
+    }
     else {
     document.getElementById('outputDiv2').innerHTML = 'Invalid move.';
     }
    }
-  document.getElementById('button4').style.display = 'block';
   
   }
   
@@ -152,18 +154,20 @@ function roomAction4 ()
   var downstr = str.toLowerCase ();
   
     if (downstr === 'look around') {
-    document.getElementById('outputDiv5').innerHTML ='You have picked up Sugar Cubes!';    
-    
+    document.getElementById('outputDiv5').innerHTML ='You have already picked up Sugar Cubes and you have found nothing else in the room; would you like to move on to the next room?';    
+    document.getElementById('choice2').style.display = 'block';
         }
     else {
        if (downstr === 'next room') {
     document.getElementById('outputDiv5').innerHTML = 'You\'re next destination is the Wrapping Room; however, you must answer the question correctly in order to move on.';
-      }
+    document.getElementById('button7').style.display = 'block';
+
+	}
     else {
     document.getElementById('outputDiv5').innerHTML = 'Invalid move.';
     }
    }
-   document.getElementById('button7').style.display = 'block';
+  
    }
    
 function problemTwo ()
@@ -188,7 +192,7 @@ function itemChooser (chosen, used)
 {
   document.getElementById('guards1').innerHTML = 'You have chosen the ' + chosen +
                                                   ' to use against the guards and have' + used +
-                                                  '! You have defeated them and will move on to the next room, the Ice Rink';
+                                                  '! You have defeated them and will move on to the next room, the Ice Rink!';
  }
   
    
@@ -208,22 +212,22 @@ function roomAction5 ()
                                                       
           if (item () === 'Tinsel') {
               document.getElementById('Tinsel').style.display = 'block';
+	      
           } else {
           if (item () === 'String of Lights') {
                document.getElementById('Lights').style.display = 'block';
           } else {
           if (item () === 'Cookies') {
                document.getElementById('Cookies').style.display = 'block';
-           }
-          }
-        }                                                         
-    }
-    else {
+           } 
+        }
+       }                                               
+    } else {
     document.getElementById('outputDiv7').innerHTML = 'Invalid move.';
     }
    }
   }
- 
+
  
 function roomAction6 ()
 {
@@ -231,12 +235,15 @@ function roomAction6 ()
   var downstr = str.toLowerCase ();
   
     if (downstr === 'look around') {
-    document.getElementById('outputDiv8').innerHTML ='You have picked up Wrapping Paper!';
-    } else {
+    document.getElementById('outputDiv8').innerHTML ='You have already picked up Wrapping Paper; there is no more objects in the room. Would you like to go to the next room?';
+    document.getElementById('choice3').style.display = 'block';
+
+	} else {
        if (downstr === 'next room') {
     document.getElementById('outputDiv8').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
                                                       'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
-                                                             
+              
+                                               
           if (item () === 'Tinsel') {
               document.getElementById('Tinsel').style.display = 'block';
            } else {   
@@ -244,17 +251,20 @@ function roomAction6 ()
                document.getElementById('Lights').style.display = 'block';
            } else {
           if (item () === 'Cookies') {
-               document.getElemetnById('Cookies').style.display = 'block';
-              }
-            }
-        }
+               document.getElementById('Cookies').style.display = 'block';
+           } else {
+	  if (document.getElementById('actionInput1').value = 'look around') {
+	      document.getElementById('yoYo').style.display = 'block';
+         } 
+	 }
+	}
+	}      
       } else {
     document.getElementById('outputDiv8').innerHTML = 'Invalid move.';
     }
    }
-  document.getElementById('button10').style.display = 'block';
-  }
-
+ }
+ 
   
   
   
