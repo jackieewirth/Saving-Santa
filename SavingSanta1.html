@@ -81,6 +81,18 @@
   
               <div id="outputDiv2" style="display:block"></div>
 
+	       <div id="choice1">
+			<button onclick="nextPage(2);				
+                          document.getElementById('outputDiv').style.display = 'none';
+                          document.getElementById('outputDiv2').style.display = 'none';
+                          document.getElementById('button3').style.display = 'none';
+                          document.getElementById('button4').style.display = 'none';
+			  document.getElementById('choice1').style.display = 'none';">Yes</button>
+			<button onclick="document.getElementById('choice1').innerHTML =
+					'There is nothing more for you to do; you have spent too much time ' +
+					'in this room and have been captured by the guards!';">No</button>
+		</div>
+
             <div id="button4">
                 <button onclick="nextPage(2);
                           document.getElementById('outputDiv').style.display = 'none';
@@ -125,6 +137,18 @@
 
           <div id="outputDiv5" style="display:block"></div>
 
+		<div id="choice2">
+			<button onclick="nextPage(4);				
+                          document.getElementById('outputDiv4').style.display = 'none';
+                          document.getElementById('outputDiv5').style.display = 'none';
+                          document.getElementById('button6').style.display = 'none';
+                          document.getElementById('button7').style.display = 'none';
+			  document.getElementById('choice2').style.display = 'none';">Yes</button>
+			<button onclick="document.getElementById('choice2').innerHTML =
+					'There is nothing more for you to do; you have spent too much time ' +
+					'in this room and have been captured by the guards!';">No</button>
+		</div>
+
           <div id="button7">
                 <button onclick="nextPage(4);
                       document.getElementById('outputDiv4').style.display = 'none';
@@ -161,20 +185,7 @@
  
             <div id="outputDiv7" style="display:block"></div>
             
-                    <div id="Tinsel">
-                        <button onclick="itemChooser('tinsel', 'covered them in tinsel so they can not see')";>Tinsel</button>
-                    </div>
-              
-                    <div id="Lights">
-                        <button onclick="itemChooser('lights', 'wrapped the guards up with lightning speed')";>Lights</button>
-                    </div>
-                  
-                    <div id="Cookies">
-                        <button onclick="itemChooser('cookies', 'made a trail of cookies to lead them from the door')";>Cookies</button>
-                    </div>
-                    
-                    <div id="guards1" style="display:block"></div>
-
+                   
               <div id="button9">
                 <label for="actionInput6">What do you want to do next?</label>
                 <input id="actionInput6" type="text">
@@ -182,6 +193,55 @@
               </div>
 
              <div id="outputDiv8" style="display:block"></div>
+
+		 <div id="Tinsel">
+                        <button onclick="itemChooser('tinsel', ' covered them in tinsel so they can not see');
+					document.getElementById('button10').style.display = 'block';">Tinsel</button>
+                    </div>
+              
+                    <div id="Lights">
+                        <button onclick="itemChooser('lights', ' wrapped the guards up with lightning speed');
+					document.getElementById('button10').style.display = 'block';">Lights</button>
+                    </div>
+                  
+                    <div id="Cookies">
+                        <button onclick="itemChooser('cookies', ' made a trail of cookies to lead them from the door');
+					document.getElementById('button10').style.display = 'block';">Cookies</button>
+                    </div>
+
+		    <div id="wrappingPaper">
+			<button onclick="itemChooser('wrapping paper', ' wrapped the guards up');
+					document.getElementById('button10').style.display = 'block';">Wrapping Paper</button>
+                    </div>
+
+		    <div id="yoYo">
+			<button onclick="itemChooser('Yo-Yo', ' hypnotized the guards and passed them!');
+					document.getElementById('button10').style.display = 'block';">Yo-Yo</button>
+		    </div>
+
+		    <div id="sugarCubes">
+			<button onclick="itemChooser('sugar cubes', ' made a trail of sugar cubes to lead the guards from the door');
+					document.getElementById('button10').style.display = 'block';">Sugar Cubes</button>
+		   </div>
+
+
+
+                    <div id="guards1" style="display:block"></div>
+
+		<div id="choice3">
+			<button onclick="document.getElementById('actionInput6').value =
+					'next room';
+					 roomAction6 ();
+				document.getElementById('outputDiv7').style.display = 'none';
+                          	document.getElementById('button9').style.display = 'none';
+                          	document.getElementById('button10').style.display = 'none';
+			  	document.getElementById('choice3').style.display = 'none';">Yes</button>
+
+			<button onclick="document.getElementById('choice3').innerHTML =
+					'There is nothing more for you to do; you have spent too much time ' +
+					'in this room and have been captured by the guards!';">No</button>
+		</div>
+
 
              <div id="button10">
                 <button onclick="nextPage(6);
