@@ -164,7 +164,7 @@ function roomAction4 ()
     document.getElementById('outputDiv5').innerHTML = 'You\'re next destination is the Wrapping Room; however, you must answer the question correctly in order to move on.';
     document.getElementById('button7').style.display = 'block';
 
-	}
+        }
     else {
     document.getElementById('outputDiv5').innerHTML = 'Invalid move.';
     }
@@ -210,38 +210,38 @@ function roomAction5 ()
      } else {
       
      if (downstrPaper === 'next room') {
-	document.getElementById('outputDiv7').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
+        document.getElementById('outputDiv7').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
                                                       'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
                                               
                  }                              
-        	 if (itemStart === 'Tinsel') {
-             	      document.getElementById('Tinsel').style.display = 'block';
+                 if (itemStart === 'Tinsel') {
+                           document.getElementById('Tinsel').style.display = 'block';
 
-          	 } else {
+                   } else {
 
-         	 if (itemStart === 'String of Lights') {
-         	      document.getElementById('Lights').style.display = 'block';
+                  if (itemStart === 'String of Lights') {
+                       document.getElementById('Lights').style.display = 'block';
 
-         	  } else {
+                   } else {
 
-         	 if (itemStart === 'Cookies') {
-         	      document.getElementById('Cookies').style.display = 'block';
-         	  }
-		
-		}
-	 
-	  
-	  if (downstrYoyo === 'look around') {
-	      document.getElementById('yoYo').style.display = 'block';
+                  if (itemStart === 'Cookies') {
+                       document.getElementById('Cookies').style.display = 'block';
+                   }
+                
+                }
+         
+          
+          if (downstrYoyo === 'look around') {
+              document.getElementById('yoYo').style.display = 'block';
           }
 
-	  if (downstrSugar === 'look around') {
-	      document.getElementById('sugarCubes').style.display = 'block';
-	 
-	    
+          if (downstrSugar === 'look around') {
+              document.getElementById('sugarCubes').style.display = 'block';
+         
+            
           } else {
-    		document.getElementById('outputDiv7').innerHTML = 'Invalid move.';
- 	}
+                    document.getElementById('outputDiv7').innerHTML = 'Invalid move.';
+         }
       }
     }
    }
@@ -257,42 +257,42 @@ function roomAction6 ()
     document.getElementById('outputDiv8').innerHTML ='You have already picked up Wrapping Paper; there is no more objects in the room. Would you like to go to the next room?';
     document.getElementById('choice3').style.display = 'block';
 
-	} else {
+        } else {
        if (downstr === 'next room') {
     document.getElementById('outputDiv8').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
                                                       'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
               
                        
-		}
+                }
                       
-          	if (itemStart === 'Tinsel') {
-             	 document.getElementById('Tinsel').style.display = 'block';
+                  if (itemStart === 'Tinsel') {
+                      document.getElementById('Tinsel').style.display = 'block';
 
-         	  } else {   
+                   } else {   
 
-        	  if (itemStart === 'String of Lights') {
-            	   document.getElementById('Lights').style.display = 'block';
+                  if (itemStart === 'String of Lights') {
+                       document.getElementById('Lights').style.display = 'block';
 
-         	  } else {
+                   } else {
 
-        	  if (itemStart === 'Cookies') {
-            	   document.getElementById('Cookies').style.display = 'block';
-          	  }
-		}
-       	 
-	  if (downstrYoyo === 'look around') {
-	      document.getElementById('yoYo').style.display = 'block';
+                  if (itemStart === 'Cookies') {
+                       document.getElementById('Cookies').style.display = 'block';
+                    }
+                }
+                
+          if (downstrYoyo === 'look around') {
+              document.getElementById('yoYo').style.display = 'block';
          } 
 
-	  if (downstrSugar === 'look around') {
-	      document.getElementById('sugarCubes').style.display = 'block';
-	 } 
+          if (downstrSugar === 'look around') {
+              document.getElementById('sugarCubes').style.display = 'block';
+         } 
 
-	  if (downstrPaper === 'look around') {
-	      document.getElementById('wrappingPaper').style.display = 'block';
-	 
-	} else {
-   		 document.getElementById('outputDiv8').innerHTML = 'Invalid move.';
+          if (downstrPaper === 'look around') {
+              document.getElementById('wrappingPaper').style.display = 'block';
+         
+        } else {
+                    document.getElementById('outputDiv8').innerHTML = 'Invalid move.';
        }
      }
    }
@@ -399,14 +399,42 @@ function problemFour ()
     }
     else {
        if (downstr === 'next room') {
-    document.getElementById('outputDiv15').innerHTML = 'You\'re next destination is Santa\'s Office; however, you must answer the question correctly in order to move on.';
-    document.getElementById('button16').style.display = 'block';
+    
+    document.getElementById('outputDiv15').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
+                                                      'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
+                                              
+                 }                              
+                 if (itemStart === 'Tinsel') {
+                           document.getElementById('Tinsel2').style.display = 'block';
+
+                   } else {
+
+                  if (itemStart === 'String of Lights') {
+                       document.getElementById('Lights2').style.display = 'block';
+
+                   } else {
+
+                  if (itemStart === 'Cookies') {
+                       document.getElementById('Cookies2').style.display = 'block';
+                   }
+                
+                }
+         
+          
+          if (downstrYoyo === 'look around') {
+              document.getElementById('yoYo2').style.display = 'block';
+          }
+
+          if (downstrSugar === 'look around') {
+              document.getElementById('sugarCubes2').style.display = 'block';
+  
     }
     else {
     document.getElementById('outputDiv15').innerHTML = 'Invalid move.';
     }
    }
   }
+ }
 
 
 function roomAction10 ()
@@ -420,13 +448,93 @@ function roomAction10 ()
         }
     else {
        if (downstr === 'next room') {
-    document.getElementById('outputDiv16').innerHTML = 'You\'re next destination is Santa\'s Office; however, you must answer the question correctly in order to move on.';
+    
+      document.getElementById('outputDiv16').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
+                                                      'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
+                                              
+                 }                              
+                 if (itemStart === 'Tinsel') {
+                           document.getElementById('Tinsel2').style.display = 'block';
+
+                   } else {
+
+                  if (itemStart === 'String of Lights') {
+                       document.getElementById('Lights2').style.display = 'block';
+
+                   } else {
+
+                  if (itemStart === 'Cookies') {
+                       document.getElementById('Cookies2').style.display = 'block';
+                   }
+                
+                }
+         
+          
+          if (downstrYoyo === 'look around') {
+              document.getElementById('yoYo2').style.display = 'block';
+          }
+
+          if (downstrSugar === 'look around') {
+              document.getElementById('sugarCubes2').style.display = 'block';
+         
+            
+        
+  
       }
+      
     else {
     document.getElementById('outputDiv16').innerHTML = 'Invalid move.';
     }
    }
-   document.getElementById('button16').style.display = 'block';
+  }
+ }  
+
+
+function problemFive ()
+{
+ var ansOne = document.getElementById('answer5').value;
+ 
+ if(ansOne === '4') {
+    document.getElementById('outputDiv17').innerHTML =
+    'Great Job! You still have two more questions to answer!';
+    
+    document.getElementById('button17').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv17').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
    }
+  } 
   
+ function problemSix ()
+{
+ var ansOne = document.getElementById('answer6').value;
+ 
+ if(ansOne === '30' || '10') {
+    document.getElementById('outputDiv19').innerHTML =
+    'Great Job! You still have one more questions to answer!';
+    
+    document.getElementById('button18').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv19').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
+   }
+  } 
   
+function problemSeven ()
+{
+ var ansOne = document.getElementById('answer7').value;
+ var downansOne = ansOne.toLowerCase ();
+  
+ if(downansOne === 'claustrophobic') {
+    document.getElementById('outputDiv21').innerHTML =
+    'Great Job! You have now entered Santa\'s Office!';
+    
+    document.getElementById('button19').style.display = 'block';
+    }
+    else {
+     document.getElementById('outputDiv21').innerHTML =
+     'I\'m sorry, that answer is incorrect. Please try again.';
+   }
+  }
