@@ -77,6 +77,7 @@ function roomAction ()
     if (downstrYoyo === 'look around') {
     document.getElementById('outputDiv').innerHTML ='You have picked up a Yo-Yo!';
     document.getElementById('button3').style.display = 'block';
+    document.getElementById('yoyoPic').style.display = 'block';
     }
     else {
        if (downstrYoyo === 'next room') {
@@ -136,6 +137,7 @@ function roomAction3 ()
     if (downstrSugar === 'look around') {
     document.getElementById('outputDiv4').innerHTML ='You have picked up Sugar Cubes!';
     document.getElementById('button6').style.display = 'block';
+    document.getElementById('sugarPic').style.display = 'block';
     }
     else {
        if (downstrSugar === 'next room') {
@@ -215,6 +217,7 @@ function roomAction5 ()
     if (downstrPaper === 'look around') {
     document.getElementById('outputDiv7').innerHTML ='You have picked up Wrapping Paper!';
     document.getElementById('button9').style.display = 'block';
+    document.getElementById('paperPic').style.display = 'block';
     
      } else {
       
@@ -346,6 +349,7 @@ function roomAction7 ()
     if (downstrHot === 'look around') {
     document.getElementById('outputDiv11').innerHTML ='You have picked up Hot Chocolate! This will keep you warm!';
     document.getElementById('button12').style.display = 'block';
+    document.getElementById('chocoPic').style.display = 'block';
     }
     else {
        if (downstrHot === 'next room') {
@@ -409,7 +413,7 @@ function problemFour ()
   var downstr = str.toLowerCase ();
   
     if (downstr === 'look around') {
-    document.getElementById('outputDiv15').innerHTML ='You have picked up a Letter!';
+    alert('You have picked up a Letter! The Letter says: Be prepared to answer some difficult questions if you want to find Santa.');
     document.getElementById('button15').style.display = 'block';
     }
     else {
@@ -520,7 +524,7 @@ function problemFive ()
 {
  var ansOne = document.getElementById('answer5').value;
  
- if(ansOne === '4') {
+ if(ansOne === '6') {
     document.getElementById('outputDiv17').innerHTML =
     'Great Job! You still have two more questions to answer!';
     
