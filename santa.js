@@ -196,6 +196,15 @@ function itemChooser (chosen, used)
                                                   ' to use against the guards and have' + used +
                                                   '! You have defeated them and will move on to the next room, the Ice Rink!';
  }
+ 
+ 
+ function itemChooser2 (chosen, used)
+{
+  document.getElementById('guards2').innerHTML = 'You have chosen the ' + chosen +
+                                                  ' to use against the guards and have' + used +
+                                                  '! You have defeated them and will move on to the next room, Santa\'s Office.' + 
+                                                  ' However, you notice that there are a series of problems that you must answer correctly inorder to enter the office.';
+ }
   
    
 function roomAction5 ()
@@ -210,41 +219,46 @@ function roomAction5 ()
      } else {
       
      if (downstrPaper === 'next room') {
-        document.getElementById('outputDiv7').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
-                                                      'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
-                                              
-                 }                              
-                 if (itemStart === 'Tinsel') {
-                           document.getElementById('Tinsel').style.display = 'block';
+           document.getElementById('outputDiv7').innerHTML = 
+          'Uh-Oh! You see from a far that there are guards blocking the door to the next room! You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
+                    
+          
+     
+          if (itemStart === 'Tinsel') {
+            document.getElementById('Tinsel').style.display = 'block';
+           
+          
+          } else {
 
-                   } else {
-
-                  if (itemStart === 'String of Lights') {
+           if (itemStart === 'String of Lights') {
                        document.getElementById('Lights').style.display = 'block';
+                    
+          
+           } else {
 
-                   } else {
-
-                  if (itemStart === 'Cookies') {
-                       document.getElementById('Cookies').style.display = 'block';
+            if (itemStart === 'Cookies') {
+                document.getElementById('Cookies').style.display = 'block';
+               
+          
                    }
-                
+                  }
                 }
-         
           
           if (downstrYoyo === 'look around') {
               document.getElementById('yoYo').style.display = 'block';
+                  
           }
 
           if (downstrSugar === 'look around') {
               document.getElementById('sugarCubes').style.display = 'block';
-         
-            
+ 
           } else {
-                    document.getElementById('outputDiv7').innerHTML = 'Invalid move.';
-         }
+            document.getElementById('Invalid').innerHTML = 'Invalid move.';
+         
       }
     }
-   }
+  }
+ }
   
  
  
@@ -263,7 +277,7 @@ function roomAction6 ()
                                                       'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
               
                        
-                }
+                
                       
                   if (itemStart === 'Tinsel') {
                       document.getElementById('Tinsel').style.display = 'block';
@@ -279,6 +293,7 @@ function roomAction6 ()
                        document.getElementById('Cookies').style.display = 'block';
                     }
                 }
+               }
                 
           if (downstrYoyo === 'look around') {
               document.getElementById('yoYo').style.display = 'block';
@@ -292,7 +307,7 @@ function roomAction6 ()
               document.getElementById('wrappingPaper').style.display = 'block';
          
         } else {
-                    document.getElementById('outputDiv8').innerHTML = 'Invalid move.';
+                    document.getElementById('Invalid2').innerHTML = 'Invalid move.';
        }
      }
    }
@@ -325,15 +340,15 @@ function problemThree ()
 
 function roomAction7 ()
 {
-  var str = document.getElementById('actionInput7').value;
-  var downstr = str.toLowerCase ();
+  strHot = document.getElementById('actionInput7').value;
+  downstrHot = strHot.toLowerCase ();
   
-    if (downstr === 'look around') {
+    if (downstrHot === 'look around') {
     document.getElementById('outputDiv11').innerHTML ='You have picked up Hot Chocolate! This will keep you warm!';
     document.getElementById('button12').style.display = 'block';
     }
     else {
-       if (downstr === 'next room') {
+       if (downstrHot === 'next room') {
     document.getElementById('outputDiv11').innerHTML = 'You\'re next destination is the Mail Room; however, you must answer the question correctly in order to move on.';
     document.getElementById('button13').style.display = 'block';
     }
@@ -403,7 +418,7 @@ function problemFour ()
     document.getElementById('outputDiv15').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
                                                       'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
                                               
-                 }                              
+                                               
                  if (itemStart === 'Tinsel') {
                            document.getElementById('Tinsel2').style.display = 'block';
 
@@ -417,7 +432,7 @@ function problemFour ()
                   if (itemStart === 'Cookies') {
                        document.getElementById('Cookies2').style.display = 'block';
                    }
-                
+                  }
                 }
          
           
@@ -427,10 +442,16 @@ function problemFour ()
 
           if (downstrSugar === 'look around') {
               document.getElementById('sugarCubes2').style.display = 'block';
-  
-    }
-    else {
-    document.getElementById('outputDiv15').innerHTML = 'Invalid move.';
+          }
+          
+          if (downstrPaper === 'look around') {
+              document.getElementById('wrappingPaper2').style.display = 'block';
+          }
+          
+          if (downstrHot === 'look around') {
+              document.getElementById('hotChocolate').style.display = 'block';
+    } else {
+    document.getElementById('Invalid3').innerHTML = 'Invalid move.';
     }
    }
   }
@@ -443,7 +464,9 @@ function roomAction10 ()
   var downstr = str.toLowerCase ();
   
     if (downstr === 'look around') {
-    document.getElementById('outputDiv16').innerHTML ='You have picked up a Letter!';    
+    document.getElementById('outputDiv16').innerHTML ='You have already picked up a Letter; Would you like to move on to the next room? The next room is Santa\'s office!' + 
+                                                      'You notice that there are many guards inside of the office and Cookie! Santa must be in there! Answer the questions correctly in order to move into the office.';
+    document.getElementById('choice5').style.display = 'block';
     
         }
     else {
@@ -452,7 +475,7 @@ function roomAction10 ()
       document.getElementById('outputDiv16').innerHTML = 'Uh-Oh! You see from a far that there are guards blocking the door to the next room!' +
                                                       'You must think quickly! You have items that could be used to get passed the guards. Which item would you like to use?';
                                               
-                 }                              
+                                              
                  if (itemStart === 'Tinsel') {
                            document.getElementById('Tinsel2').style.display = 'block';
 
@@ -466,7 +489,7 @@ function roomAction10 ()
                   if (itemStart === 'Cookies') {
                        document.getElementById('Cookies2').style.display = 'block';
                    }
-                
+                  }
                 }
          
           
@@ -476,14 +499,17 @@ function roomAction10 ()
 
           if (downstrSugar === 'look around') {
               document.getElementById('sugarCubes2').style.display = 'block';
+         }
+                   
+          if (downstrPaper === 'look around') {
+              document.getElementById('wrappingPaper2').style.display = 'block';
+          }
+          
+          if (downstrHot === 'look around') {
+              document.getElementById('hotChocolate').style.display = 'block';
          
-            
-        
-  
-      }
-      
-    else {
-    document.getElementById('outputDiv16').innerHTML = 'Invalid move.';
+         } else {
+    document.getElementById('Invalid4').innerHTML = 'Invalid move.';
     }
    }
   }
