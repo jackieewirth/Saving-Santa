@@ -18,7 +18,11 @@
         <p>
                 <h1>SAVING SANTA</h1>
  <div id="page0" style="display: block;">
-                WE NEED YOUR HELP! Santa has been kidnapped with only two days until Christmas!<br>
+        
+        <img src=" http://i1.ytimg.com/vi/pLSa_GNL4V8/maxresdefault.jpg" alt="Picture of Santa" height="180" width="320"> <br>
+         
+         
+         WE NEED YOUR HELP! Santa has been kidnapped with only two days until Christmas!<br>
         Santa has been missing for two days; a note was found in his home stating: <br>
         "There will be no Christmas this year if I can not work for Santa in his workshop - <br>
         good luck trying to save Christmas, you'll need it!" The letter was signed by Cookie, <br>
@@ -33,11 +37,28 @@
     Now, choose what type of a character you want to be: <br>
 
       <input type="button" value="Elf"
-            onclick="userCreate('Elf')";>
+            onclick="userCreate('Elf');
+            document.getElementById('elfPic').style.display = 'block';">
+        
       <input type="button" value="Reindeer"
-            onclick="userCreate('Reindeer')";>
+            onclick="userCreate('Reindeer');
+            document.getElementById('reindeerPic').style.display = 'block';">
+            
       <input type="button" value="Mrs. Claus"
-            onclick="userCreate('Mrs. Claus')";></div>
+            onclick="userCreate('Mrs. Claus');
+                      document.getElementById('clausPic').style.display = 'block';"></div>
+     
+        <div id="elfPic">
+            <img src="http://4.bp.blogspot.com/-Br2RVpjMeIU/TrqXGxv0pwI/AAAAAAAAAu8/judZPXrhgeU/s320/WillFerrellElf.jpg" alt="Picture of Elf">
+        </div>
+        
+        <div id="reindeerPic">
+            <img src="http://www.how-to-draw-cartoons-online.com/image-files/how_to_draw_reindeer.gif" alt="Picture of Reindeer">
+        </div>
+        
+        <div id="clausPic">
+          <img src="http://www.shadowlakeshopping.com/Post/sections/4/Images/Mrs%20Claus%20v2.jpg" alt="Picture of Mrs. Claus" height="227.5" width="150">
+        </div>
         
       <div id="button">
         <input type="button" value="Enter"
@@ -72,6 +93,12 @@
           <button onclick="roomAction ()">Enter</button>
       </div>
 
+
+            <div id="yoyoPic">
+                <img src="http://1.bp.blogspot.com/-mrVcLDWXBGE/UKUDeWLE5_I/AAAAAAAAAGk/3rgh0_EWzQA/s1600/yoyo.jpg" alt="Yo-Yo" height="92.75" width="125">
+            </div>
+            
+            
             <div id="outputDiv" style="display:block"></div>
 
             <div id="button3">
@@ -89,7 +116,8 @@
                           document.getElementById('outputDiv2').style.display = 'none';
                           document.getElementById('button3').style.display = 'none';
                           document.getElementById('button4').style.display = 'none';
-                          document.getElementById('choice1').style.display = 'none';">Yes</button>
+                          document.getElementById('choice1').style.display = 'none';
+                          document.getElementById('yoyoPic').style.display = 'none';">Yes</button>
                         <button onclick="document.getElementById('choice1').innerHTML =
                                         'There is nothing more for you to do; you have spent too much time ' +
                                         'in this room and have been captured by the guards!';">No</button>
@@ -100,7 +128,8 @@
                           document.getElementById('outputDiv').style.display = 'none';
                           document.getElementById('outputDiv2').style.display = 'none';
                           document.getElementById('button3').style.display = 'none';
-                          document.getElementById('button4').style.display = 'none';">Next</button>
+                          document.getElementById('button4').style.display = 'none';
+                          document.getElementById('yoyoPic').style.display = 'none';">Next</button>
             </div>
 
       <div id="page3">
@@ -108,7 +137,7 @@
             the machine broke! Oh no! They have to make at leas 2340 toys before Christmas! How many <br>
             toys do they still have to make?</p>
       
-              <input id="answer1" type="text">
+              <input id="answer1" type="text"> <p> toys </p>
               <button onclick="problemOne ()">Enter</button>
           <div id="outputDiv3" style="display:block"></div>
       
@@ -128,16 +157,20 @@
      
               <input id="actionInput3" type="text">
               <button onclick="roomAction3 ();">Enter</button>
- 
-          <div id="outputDiv4" style="display:block"></div>
+              
+            <div id="sugarPic">
+                <img src="http://www.eatingitreal.com/wp-content/uploads/2012/08/sugar-cubes.jpg" alt="Picture of Sugar Cubes" height="154" width="128">
+            </div>
+           
+                  <div id="outputDiv4" style="display:block"></div>
 
-          <div id="button6">
-              <label for="actionInput4">What do you want to do next?</label>
-               <input id="actionInput4" type="text">
-                <button onclick="roomAction4 ()">Enter</button>
-          </div>
+                    <div id="button6">
+                        <label for="actionInput4">What do you want to do next?</label>
+                        <input id="actionInput4" type="text">
+                        <button onclick="roomAction4 ()">Enter</button>
+                  </div>
 
-          <div id="outputDiv5" style="display:block"></div>
+                        <div id="outputDiv5" style="display:block"></div>
 
                 <div id="choice2">
                         <button onclick="nextPage(4);                                
@@ -145,7 +178,8 @@
                           document.getElementById('outputDiv5').style.display = 'none';
                           document.getElementById('button6').style.display = 'none';
                           document.getElementById('button7').style.display = 'none';
-                          document.getElementById('choice2').style.display = 'none';">Yes</button>
+                          document.getElementById('choice2').style.display = 'none';
+                          document.getElementById('sugarPic').style.display = 'none';">Yes</button>
                         
 
                         <button onclick="document.getElementById('choice2').innerHTML =
@@ -158,10 +192,11 @@
                       document.getElementById('outputDiv4').style.display = 'none';
                       document.getElementById('outputDiv5').style.display = 'none';
                       document.getElementById('button6').style.display = 'none';
-                      document.getElementById('button7').style.display = 'none';">Next</button>
+                      document.getElementById('button7').style.display = 'none';
+                      document.getElementById('suagrPic').style.display = 'none';">Next</button>
           </div>
 
-      </div>
+    </div>
 
       <div id="page5">
       
@@ -188,6 +223,11 @@
           <button onclick="roomAction5 ();">Enter</button>
  
             <div id="outputDiv7" style="display:block"></div>
+            
+            <div id="paperPic">
+                <img src="http://i00.i.aliimg.com/wsphoto/v0/1042360318/Mixed-wholesale-font-b-Christmas-b-font-Series-gift-font-b-wrapping-b-font-font-b.jpg" alt="Picture of Wrapping Paper" height="152.25" width="142.5">
+            </div>
+          
             
                    
               <div id="button9">
@@ -239,7 +279,8 @@
                                 document.getElementById('outputDiv7').style.display = 'none';
                                   document.getElementById('button9').style.display = 'none';
                                   document.getElementById('button10').style.display = 'none';
-                                  document.getElementById('choice3').style.display = 'none';">Yes</button>
+                                  document.getElementById('choice3').style.display = 'none';
+                                  document.getElementById('paperPic').style.display = 'none';">Yes</button>
 
                         <button onclick="document.getElementById('choice3').innerHTML =
                                         'There is nothing more for you to do; you have spent too much time ' +
@@ -253,7 +294,8 @@
                       document.getElementById('outputDiv7').style.display = 'none';
                       document.getElementById('outputDiv8').style.display = 'none';
                       document.getElementById('button9').style.display = 'none';
-                      document.getElementById('button10').style.display = 'none';">Next</button>
+                      document.getElementById('button10').style.display = 'none';
+                      document.getElementById('paperPic').style.display = 'none';">Next</button>
               </div>
 
       </div>
@@ -290,13 +332,19 @@
  
             <div id="outputDiv11" style="display:block"></div>
 
+            <div id="chocoPic">
+                <img src="http://www.chocolatefudgecafe.com/wp-content/uploads/2012/11/hot-chocolate.jpg" alt="Picture of Hot Chocolate" height="152" width="150">
+            </div>
+
             <div id="button12">
                 <label for="actionInput8">What do you want to do next?</label>
                 <input id="actionInput8" type="text">
                 <button onclick="roomAction8 ()">Enter</button>
             </div>
 
+
             <div id="outputDiv12" style="display:block"></div>
+                        
 
                 <div id="choice4">
                         <button onclick="nextPage(8);
@@ -304,7 +352,8 @@
                                   document.getElementById('outputDiv12').style.display = 'none';
                                 document.getElementById('button12').style.display = 'none';
                                 document.getElementById('button13').style.display = 'none';
-                                document.getElementById('choice4').style.display = 'none';">Yes</button>
+                                document.getElementById('choice4').style.display = 'none';
+                                document.getElementById('chocoPic').style.display = 'none';">Yes</button>
 
                         <button onclick="document.getElementById('choice4').innerHTML =
                                         'There is nothing more for you to do; you have spent too much time ' +
@@ -316,7 +365,8 @@
                       document.getElementById('outputDiv11').style.display = 'none';
                       document.getElementById('outputDiv12').style.display = 'none';
                       document.getElementById('button12').style.display = 'none';
-                      document.getElementById('button13').style.display = 'none';">Next</button>
+                      document.getElementById('button13').style.display = 'none';
+                      document.getElementById('chocoPic').style.display = 'none';">Next</button>
             </div>
       </div>
 
@@ -469,12 +519,24 @@
           <div id="outputDiv22" style="display:block"></div> 
             
           <div id="button19">
-               <button onclick="nextPage(13)">Continue</button>
+               <button onclick="nextPage(13);
+                                document.getElementById('instructions').style.display = 'none';
+                                document.getElementById('elfPic').style.display = 'none';
+                                document.getElementById('reindeerPic').style.display = 'none';
+                                document.getElementById('clausPic').style.display = 'none';">Continue</button>
           </div>
       </div>  
  
+      <div id="page14">
+       
+          <p> CONGRATULATIONS!! YOU HAVE FOUND SANTA BEING KEPT IN HIS OFFICE! COOKIE IS SO SURPRISED TO SEE THAT <br>
+              YOU HAVE DEFEATED HIS GUARDS AND THE QUESTIONS! SANTA IS SO GRATEFUL THAT YOU HAVE SAVED HIM!!!! <br>
+                HE HAS AWARDED YOU WITH THE KEYS TO HIS SLEIGH AND HAS TOLD YOU THAT YOU CAN JOIN HIM ON CHRISTMAS EVE NIGHT <br>
+                 TO BRING THE TOYS TO CHILDREN ALL AROUND THE WORLD!!!" </p>
  
+      <img src="http://us.123rf.com/400wm/400/400/AlienCat/AlienCat1111/AlienCat111100007/11122720-santa-jumping-for-joy--3d-render.jpg" alt="Picture of Santa Happy">
  
+      </div>
       
  </div>
 </body></html>
