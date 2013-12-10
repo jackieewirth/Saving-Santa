@@ -404,7 +404,7 @@ function roomAction7 ()
   }
 
 
-function roomAction8 
+function roomAction8 ()
 //Assumes: the user will input an action choice.
 //Returns: informs the user of the consequences of their action.
 {
