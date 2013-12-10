@@ -5,16 +5,16 @@
 
     <title>Saving Santa</title>
 
-    <script type="text/javascript" src="santa.js"></script>
+           <script type="text/javascript" src="santa.js"></script>
 
-      <style type="text/css">
-          body { text-align: center; 
+          <style type="text/css">
+                      body { text-align: center; 
           		 font-family: Century Gothic;
           		 background-image: 	url("http://www.wpclipart.com/page_frames/holiday/Christmas/Christmas_lights/Merry_Christmas_lights_border.png");
           		 }
           		
-          div { display: none; }
-      </style>
+                    div { display: none; }
+          </style>
 </head>
 
 <body onload="start ();">
@@ -37,23 +37,23 @@
         the job. We know that Santa is somewhere inside of the Workshop. It is up to YOU, as Santa's <br>
         first-hand man, to find Santa and save him in time for Christmas! <br>
 
-    <p>First, please Enter Your Name:</p>
-    <label for="nameBox">Name:</label>
-    <input type="text" id="nameBox"> <br>
-        <br>
-    Now, choose what type of a character you want to be: <br>
+           <p>First, please Enter Your Name:</p>
+          <label for="nameBox">Name:</label>
+          <input type="text" id="nameBox"> <br>
+            <br>
+           Now, choose what type of a character you want to be: <br>
 
-      <input type="button" value="Elf"
-            onclick="userCreate('Elf');
-            document.getElementById('elfPic').style.display = 'block';">
+           <input type="button" value="Elf"
+                     onclick="userCreate('Elf');
+                               document.getElementById('elfPic').style.display = 'block';">
         
-      <input type="button" value="Reindeer"
-            onclick="userCreate('Reindeer');
-            document.getElementById('reindeerPic').style.display = 'block';">
+            <input type="button" value="Reindeer"
+                     onclick="userCreate('Reindeer');
+                               document.getElementById('reindeerPic').style.display = 'block';">
             
-      <input type="button" value="Mrs. Claus"
-            onclick="userCreate('Mrs. Claus');
-                      document.getElementById('clausPic').style.display = 'block';"></div>
+           <input type="button" value="Mrs. Claus"
+                     onclick="userCreate('Mrs. Claus');
+                                document.getElementById('clausPic').style.display = 'block';"></div>
      
         <div id="elfPic">
             <img src="http://4.bp.blogspot.com/-Br2RVpjMeIU/TrqXGxv0pwI/AAAAAAAAAu8/judZPXrhgeU/s320/WillFerrellElf.jpg" alt="Picture of Elf">
@@ -67,16 +67,16 @@
           <img src="http://www.shadowlakeshopping.com/Post/sections/4/Images/Mrs%20Claus%20v2.jpg" alt="Picture of Mrs. Claus" height="227.5" width="150">
         </div>
         
-      <div id="button">
-        <input type="button" value="Enter"
-              onclick="gameStart()";>
-       </div>
+           <div id="button">
+                    <input type="button" value="Enter"
+                      onclick="gameStart()";>
+           </div>
 
-      <div id="button2">
-        <input type="button" value="Next"
-              onclick="nextPage(0)";>
+           <div id="button2">
+                     <input type="button" value="Next"
+                     onclick="nextPage(0)";>
         
-      </div>
+            </div>
 
 
       <div id="instructions">
@@ -87,18 +87,18 @@
 
         <hr>
   
-    <div id="page1">
+ <div id="page1">
 
         <input type="button" value="Click to Start the Game!"
                 onclick="nextPage(1)";>
-    </div>
+ </div>
 
 
-      <div id="page2">
+<div id="page2">
           <label for="actionInput">What do you want to do?</label>
           <input id="actionInput" type="text">
           <button onclick="roomAction ()">Enter</button>
-      </div>
+</div>
 
 
             <div id="yoyoPic">
@@ -139,24 +139,31 @@
                           document.getElementById('yoyoPic').style.display = 'none';">Next</button>
             </div>
 
-      <div id="page3">
+ <div id="page3">
+ 
+     <div id="toyPic" alt="Toys">
+               <img src="http://images2.wikia.nocookie.net/__cb20121206143516/epicrapbattlesofhistory/images/d/df/Christmas_elves-3003.gif" alt="Making Toys">
+     </div>
+        
         <p> The Elves were making toys in preparation for Christmas! But after they made 500 toys, <br>
             the machine broke! Oh no! They have to make at leas 2340 toys before Christmas! How many <br>
             toys do they still have to make?</p>
       
               <input id="answer1" type="text"> <p> toys </p>
               <button onclick="problemOne ()">Enter</button>
-          <div id="outputDiv3" style="display:block"></div>
+         
+                     <div id="outputDiv3" style="display:block"></div>
       
       
             <div id="button5">
-            <button onclick="nextPage(3)">Continue</button>
+            <button onclick="nextPage(3);
+                              document.getElementById('toyPic').style.display = 'none';">Continue</button>
             </div>
  
-      </div>
+</div>
 
 
-      <div id="page4">
+<div id="page4">
 
          <p> You are now standing in the Breakroom of Santa's Workshop! This is where the tired workers take their <br>
               breaks, relax, and have a snack. It is a small room, but of course decorated from floor to ceiling in Christmas lights and decorations! <br>
@@ -203,9 +210,13 @@
                       document.getElementById('suagrPic').style.display = 'none';">Next</button>
           </div>
 
-    </div>
+</div>
 
-      <div id="page5">
+<div id="page5">
+      
+      <div id="ribbonPic">
+                <img src="http://www.allvectors.com/wp-content/uploads/2012/06/ribbon-vector.jpg" alt="Ribbon" width="170" height="85.5">
+      </div>
       
           <p> You have 45 yards of ribbon for your Christmas gift boxes. Each box gets the same amount of ribbon <br>
             How much ribbon will each of your 15 gift boxes get? <br> </p>
@@ -216,12 +227,13 @@
             <div id="outputDiv6" style="display:block"></div>
         
             <div id="button8">
-                <button onclick="nextPage(5)">Continue</button>
+                <button onclick="nextPage(5);
+                              document.getElementById('ribbonPic').style.display = 'none';">Continue</button>
             </div>
-      </div>
+</div>
   
  
-      <div id="page6">
+<div id="page6">
 
          <p> You are now standing in the Wrapping Room of Santa's Workshop! Here is where all of the toys are wrapped perfectly <br>
               before being loaded onto Santa's sleigh and taken to children around the world. What do you want to do now? <br> </p>
@@ -294,7 +306,7 @@
                                         'in this room and have been captured by the guards!';">No</button>
                 </div>
      
-               <div id="Invalid2"></div>
+                    <div id="Invalid2"></div>
 
              <div id="button10">
                 <button onclick="nextPage(6);
@@ -305,10 +317,14 @@
                       document.getElementById('paperPic').style.display = 'none';">Next</button>
               </div>
 
+ </div>
+
+
+<div id="page7">
+      
+      <div id="heightPic">
+                    <img src="http://www.designcutters.com/HolidayArt/santa-elf.jpg" alt="Santa and Elf" height="178" width="170">
       </div>
-
-
-      <div id="page7">
       
           <p> Santa is taller then Noel but shorter then Buddy and Gabriel. Buddy is shorter then Gabriel. <br>
               Holly is shorter then Noel. Who is the shortest? <br> </p>
@@ -316,20 +332,18 @@
           <input id="answer3" type="text">
           <button onclick="problemThree ()">Enter</button>
           
-            <div id="outputDiv9" style="display:block"></div>
+                     <div id="outputDiv9" style="display:block"></div>
       
-            <div id="outputDiv10" style="display:block"></div>   
+                              <div id="outputDiv10" style="display:block"></div>   
             
-            <div id="button11">
-                  <button onclick="nextPage(7)">Continue</button>
-            </div>
-        </div>
- 
- 
-
+                              <div id="button11">
+                                         <button onclick="nextPage(7);
+                                                      document.getElementById('heightPic').style.display = 'none';">Continue</button>
+                              </div>
+</div>
 
  
-      <div id="page8">
+<div id="page8">
 
           <p> You are now standing in the Ice Rink of Santa's Workshop! Of course it is absolutely freezing in here! <br>
                This is where the workers go after they are done working and want to have some fun! What do you want to do now? <br> </p>
@@ -337,11 +351,11 @@
             <input id="actionInput7" type="text">
             <button onclick="roomAction7 ();">Enter</button>
  
-            <div id="outputDiv11" style="display:block"></div>
+                    <div id="outputDiv11" style="display:block"></div>
 
-            <div id="chocoPic">
-                <img src="http://www.chocolatefudgecafe.com/wp-content/uploads/2012/11/hot-chocolate.jpg" alt="Picture of Hot Chocolate" height="152" width="150">
-            </div>
+                     <div id="chocoPic">
+                               <img src="http://www.chocolatefudgecafe.com/wp-content/uploads/2012/11/hot-chocolate.jpg" alt="Picture of Hot Chocolate" height="152" width="150">
+                    </div>
 
             <div id="button12">
                 <label for="actionInput8">What do you want to do next?</label>
@@ -350,7 +364,7 @@
             </div>
 
 
-            <div id="outputDiv12" style="display:block"></div>
+                     <div id="outputDiv12" style="display:block"></div>
                         
 
                 <div id="choice4">
@@ -375,13 +389,15 @@
                       document.getElementById('button13').style.display = 'none';
                       document.getElementById('chocoPic').style.display = 'none';">Next</button>
             </div>
-      </div>
+</div>
 
 
-
-
-      <div id="page9">
+<div id="page9">
       
+      <div id="sleighPic">
+          <img src="http://www.clipartpal.com/_thumbs/pd/holiday/christmas/santa_sleigh_w_reindeer_1.png" alt="Santa on his Sleigh">
+       </div>   
+          
           <p> Santa drove his sleigh 50 miles per hour for a certain distance to deliever his presesnts to the kids <br>
               in New York City. He then drove 60 miles per hour for the same distance. What is the average speed for <br>
               the whole trip? <br> </p>
@@ -389,18 +405,19 @@
         <input id="answer4" type="text"> <p> miles per hour </p>
         <button onclick="problemFour ()">Enter</button>
         
-          <div id="outputDiv13" style="display:block"></div>
+                    <div id="outputDiv13" style="display:block"></div>
       
-          <div id="outputDiv14" style="display:block"></div> 
+                    <div id="outputDiv14" style="display:block"></div> 
             
           <div id="button14">
-               <button onclick="nextPage(9)">Continue</button>
+               <button onclick="nextPage(9);
+                                document.getElementById('sleighPic').style.display = 'none';">Continue</button>
           </div>
-      </div>
+</div>
 
 
 
-      <div id="page10">
+<div id="page10">
 
           <p> You are now standing in the Mail Room of Santa's Workshop! <br>
               What do you want to do now? <br> </p>
@@ -408,15 +425,15 @@
             <input id="actionInput9" type="text">
             <button onclick="roomAction9 ();">Enter</button>
  
-            <div id="outputDiv15" style="display:block"></div>
+                     <div id="outputDiv15" style="display:block"></div>
 
-            <div id="button15">
-                <label for="actionInput10">What do you want to do next?</label>
-                <input id="actionInput10" type="text">
-                <button onclick="roomAction10 ()">Enter</button>
-            </div>
+                     <div id="button15">
+                               <label for="actionInput10">What do you want to do next?</label>
+                              <input id="actionInput10" type="text">
+                              <button onclick="roomAction10 ()">Enter</button>
+                    </div>
 
-            <div id="outputDiv16" style="display:block"></div>
+                               <div id="outputDiv16" style="display:block"></div>
 
                     <div id="Tinsel2">
                        <button onclick="itemChooser('tinsel', ' covered them in tinsel so they can not see');
@@ -453,15 +470,15 @@
                                         document.getElementById('button16').style.display = 'block';">Hot Chocolate</button>
                    </div>
                    
-                   <div id="guards2" style="display:block"></div>
+                               <div id="guards2" style="display:block"></div>
                    
-                   <div id="Invalid3"></div>
+                              <div id="Invalid3"></div>
                   
                    
                    <div id="choice5">
                         <button onclick="nextPage(10);
                                 document.getElementById('outputDiv15').style.display = 'none';
-                                  document.getElementById('outputDiv16').style.display = 'none';
+                                document.getElementById('outputDiv16').style.display = 'none';
                                 document.getElementById('button15').style.display = 'none';
                                 document.getElementById('button16').style.display = 'none';
                                 document.getElementById('choice5').style.display = 'none';">Yes</button>
@@ -471,7 +488,7 @@
                                         'in this room and have been captured by the guards!';">No</button>
                 </div>
                   
-                  <div id="Invalid4"></div>
+                     <div id="Invalid4"></div>
 
             <div id="button16">
                   <button onclick="nextPage(10);
@@ -480,10 +497,10 @@
                           document.getElementById('button15').style.display = 'none';
                           document.getElementById('button16').style.display = 'none';">Next</button>
             </div>
-      </div>
+</div>
  
  
-      <div id="page11">
+<div id="page11">
       
           <p> Four elves have a number of cookies. The first elf has 2 cookies, the second has 3 cookies, the third has 5 <br>
           cookies and the fourth has x cookies. If the average number of cookies is equal to 4, how many cookies does the fourth elf have? </p>
@@ -491,50 +508,52 @@
         <input id="answer5" type="text"> <p> cookies </p>
         <button onclick="problemFive ()">Enter</button>
         
-          <div id="outputDiv17" style="display:block"></div>
+                    <div id="outputDiv17" style="display:block"></div>
       
-          <div id="outputDiv18" style="display:block"></div> 
+                    <div id="outputDiv18" style="display:block"></div> 
             
-          <div id="button17">
-               <button onclick="nextPage(11)">Continue</button>
-          </div>
-      </div>
+                    <div id="button17">
+                              <button onclick="nextPage(11)">Continue</button>
+                    </div>
+</div>
  
-  <div id="page12">
+<div id="page12">
       
           <p> The Ice Rink has an area of 300 square meters and a perimeter of 80 meters. What is the length  of the Rink?</p>
         <input id="answer6" type="text"> <p> meters </p>
         <button onclick="problemSix ()">Enter</button>
         
-          <div id="outputDiv19" style="display:block"></div>
+           <div id="outputDiv19" style="display:block"></div>
       
-          <div id="outputDiv20" style="display:block"></div> 
+                    <div id="outputDiv20" style="display:block"></div> 
             
-          <div id="button18">
-               <button onclick="nextPage(12)">Continue</button>
-          </div>
-      </div>
+                    <div id="button18">
+                               <button onclick="nextPage(12)">Continue</button>
+                    </div>
+                              
+ </div>
       
-    <div id="page13">
+<div id="page13">
       
           <p> What do you call people that are afraid of Santa Clause?</p>
         <input id="answer7" type="text"> 
         <button onclick="problemSeven ()">Enter</button>
         
-          <div id="outputDiv21" style="display:block"></div>
+                    <div id="outputDiv21" style="display:block"></div>
       
-          <div id="outputDiv22" style="display:block"></div> 
+                    <div id="outputDiv22" style="display:block"></div> 
             
-          <div id="button19">
-               <button onclick="nextPage(13);
-                                document.getElementById('instructions').style.display = 'none';
-                                document.getElementById('elfPic').style.display = 'none';
-                                document.getElementById('reindeerPic').style.display = 'none';
-                                document.getElementById('clausPic').style.display = 'none';">Continue</button>
-          </div>
-      </div>  
+                     <div id="button19">
+                               <button onclick="nextPage(13);
+                                         document.getElementById('instructions').style.display = 'none';
+                                         document.getElementById('elfPic').style.display = 'none';
+                                        document.getElementById('reindeerPic').style.display = 'none';
+                                        document.getElementById('clausPic').style.display = 'none';">Continue</button>
+                    </div>
+                              
+ </div>  
  
-      <div id="page14">
+<div id="page14">
        
           <p> CONGRATULATIONS!! YOU HAVE FOUND SANTA BEING KEPT IN HIS OFFICE! COOKIE IS SO SURPRISED TO SEE THAT <br>
               YOU HAVE DEFEATED HIS GUARDS AND THE QUESTIONS! SANTA IS SO GRATEFUL THAT YOU HAVE SAVED HIM!!!! <br>
