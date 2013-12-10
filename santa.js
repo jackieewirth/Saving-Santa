@@ -1,4 +1,7 @@
-function nextPage(curr) {
+function nextPage(curr) 
+//Assumes: There are different labeled pages.
+//Returns: Moves to the next page in numeric order.
+{
       var next, currPage, nextPage;
 
       next = curr + 1;
@@ -12,24 +15,34 @@ function nextPage(curr) {
       document.getElementById('instructions').style.display = 'block';
     }
 
-function start() {
+function start() 
+//Assumes: Everything is hidden.
+//Returns: shows the contents of the first page.
+{
       document.getElementById('page0').style.display = 'block';
 
-    }
+ }
 
 
 function RandomInt (low, high)
+//Assumes: nothing
+//Returns: a random number
 {
+
   return Math.floor(Math.random()*(high-low+1)) + low;
 }
 
 
 function RandomOneOf (list)
+//Assumes: nothing.
+//Returns: a random item from a list.
 {
   return list[RandomInt(0, list.length-1)];
 }
 
 function item ()
+//Assumes: there is an array of data.
+//Returns: a random item from the array.
 {
   return RandomOneOf (['Tinsel', 'String of Lights', 'Cookies']);
     
@@ -38,6 +51,8 @@ function item ()
 
 
 function userCreate (characterType)
+//Assumes: there is data input.
+//Returns: informs the user of their name and what character they have chosen to be.
 {
     
   var name = document.getElementById('nameBox').value;
@@ -59,6 +74,8 @@ function userCreate (characterType)
 
 
 function gameStart ()
+//Assumes: nothing.
+//Returns: informs the user where they will be starting the game.
 {
   document.getElementById('page0').innerHTML =
   'You currently have the ' + itemStart +
@@ -70,6 +87,8 @@ function gameStart ()
 }
 
 function roomAction ()
+//Assumes: nthe user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   strYoyo = document.getElementById('actionInput').value;
   downstrYoyo = strYoyo.toLowerCase ();
@@ -91,6 +110,8 @@ function roomAction ()
   }
 
 function roomAction2 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   var str = document.getElementById('actionInput2').value;
   var downstr = str.toLowerCase ();
@@ -113,6 +134,8 @@ function roomAction2 ()
   }
   
 function problemOne ()
+//Assumes: the user will input an answer.
+//Returns: informs the user if they can move to the next room.
 {
  var ansOne = document.getElementById('answer1').value;
  
@@ -130,6 +153,8 @@ function problemOne ()
 
 
 function roomAction3 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   strSugar = document.getElementById('actionInput3').value;
   downstrSugar = strSugar.toLowerCase ();
@@ -153,6 +178,8 @@ function roomAction3 ()
 
 
 function roomAction4 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   var str = document.getElementById('actionInput4').value;
   var downstr = str.toLowerCase ();
@@ -175,6 +202,8 @@ function roomAction4 ()
    }
    
 function problemTwo ()
+//Assumes: the user will input an answer.
+//Returns: informs the user if their answer is correct and if they move to the next room.
 {
  var ansOne = document.getElementById('answer2').value;
  
@@ -193,6 +222,8 @@ function problemTwo ()
   
   
 function itemChooser (chosen, used)
+//Assumes: the user will choose an item to use.
+//Returns: informs the user of the consequences of their choice.
 {
   document.getElementById('guards1').innerHTML = 'You have chosen the ' + chosen +
                                                   ' to use against the guards and have' + used +
@@ -201,6 +232,8 @@ function itemChooser (chosen, used)
  
  
  function itemChooser2 (chosen, used)
+ //Assumes: the user will choose an item to use.
+ //Returns: informs the user of the consequences of their choice.
 {
   document.getElementById('guards2').innerHTML = 'You have chosen the ' + chosen +
                                                   ' to use against the guards and have' + used +
@@ -210,6 +243,8 @@ function itemChooser (chosen, used)
   
    
 function roomAction5 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   strPaper = document.getElementById('actionInput5').value;
   downstrPaper = strPaper.toLowerCase ();
@@ -266,6 +301,8 @@ function roomAction5 ()
  
  
 function roomAction6 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   var str = document.getElementById('actionInput6').value;
   var downstr = str.toLowerCase ();
@@ -321,6 +358,8 @@ function roomAction6 ()
   
   
 function problemThree ()
+//Assumes: the user will input an answer.
+//Returns: informs the user if their answer is correct and if they move to the next room.
 {
  var ansOne = document.getElementById('answer3').value;
  var downstr = ansOne.toLowerCase ();
@@ -342,6 +381,8 @@ function problemThree ()
 
 
 function roomAction7 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   strHot = document.getElementById('actionInput7').value;
   downstrHot = strHot.toLowerCase ();
@@ -363,7 +404,9 @@ function roomAction7 ()
   }
 
 
-function roomAction8 ()
+function roomAction8 
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   var str = document.getElementById('actionInput8').value;
   var downstr = str.toLowerCase ();
@@ -388,6 +431,8 @@ function roomAction8 ()
 
   
 function problemFour ()
+//Assumes: the user will input an answer.
+//Returns: informs the user if their answer is correct and if they move to the next room.
 {
  var ansOne = document.getElementById('answer4').value;
  
@@ -408,6 +453,8 @@ function problemFour ()
  
  
  function roomAction9 ()
+ //Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   var str = document.getElementById('actionInput9').value;
   var downstr = str.toLowerCase ();
@@ -463,6 +510,8 @@ function problemFour ()
 
 
 function roomAction10 ()
+//Assumes: the user will input an action choice.
+//Returns: informs the user of the consequences of their action.
 {
   var str = document.getElementById('actionInput10').value;
   var downstr = str.toLowerCase ();
@@ -521,6 +570,8 @@ function roomAction10 ()
 
 
 function problemFive ()
+//Assumes: the user will input an answer.
+//Returns: informs the user if their answer is correct and if they move to the next room.
 {
  var ansOne = document.getElementById('answer5').value;
  
@@ -537,6 +588,8 @@ function problemFive ()
   } 
   
  function problemSix ()
+ //Assumes: the user will input an answer.
+//Returns: informs the user if their answer is correct and if they move to the next room.
 {
  var ansOne = document.getElementById('answer6').value;
  
@@ -553,6 +606,8 @@ function problemFive ()
   } 
   
 function problemSeven ()
+//Assumes: the user will input an answer.
+//Returns: informs the user if their answer is correct and if they move to the next room.
 {
  var ansOne = document.getElementById('answer7').value;
  var downansOne = ansOne.toLowerCase ();
