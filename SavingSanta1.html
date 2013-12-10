@@ -141,7 +141,7 @@
 
  <div id="page3">
  
-     <div id="toyPic" alt="Toys">
+     <div id="toyPic" alt="Toys" style="display:block">
                <img src="http://images2.wikia.nocookie.net/__cb20121206143516/epicrapbattlesofhistory/images/d/df/Christmas_elves-3003.gif" alt="Making Toys">
      </div>
         
@@ -214,7 +214,7 @@
 
 <div id="page5">
       
-      <div id="ribbonPic">
+      <div id="ribbonPic" style="display:block">
                 <img src="http://www.allvectors.com/wp-content/uploads/2012/06/ribbon-vector.jpg" alt="Ribbon" width="170" height="85.5">
       </div>
       
@@ -322,7 +322,7 @@
 
 <div id="page7">
       
-      <div id="heightPic">
+      <div id="heightPic" style="display:block">
                     <img src="http://www.designcutters.com/HolidayArt/santa-elf.jpg" alt="Santa and Elf" height="178" width="170">
       </div>
       
@@ -394,7 +394,7 @@
 
 <div id="page9">
       
-      <div id="sleighPic">
+      <div id="sleighPic" style="display:block">
           <img src="http://www.clipartpal.com/_thumbs/pd/holiday/christmas/santa_sleigh_w_reindeer_1.png" alt="Santa on his Sleigh">
        </div>   
           
@@ -502,6 +502,10 @@
  
 <div id="page11">
       
+      <div id="elfCookies" style="display:block">
+                <img src="http://www.kodak.com/US/images/en/corp/1000words/vera/ChristmasCookiePlate.jpg" width="200" height="136.25">
+      </div>
+      
           <p> Four elves have a number of cookies. The first elf has 2 cookies, the second has 3 cookies, the third has 5 <br>
           cookies and the fourth has x cookies. If the average number of cookies is equal to 4, how many cookies does the fourth elf have? </p>
             
@@ -513,11 +517,16 @@
                     <div id="outputDiv18" style="display:block"></div> 
             
                     <div id="button17">
-                              <button onclick="nextPage(11)">Continue</button>
+                              <button onclick="nextPage(11);
+                                        document.getElementById('elfCookies').style.display = 'none';">Continue</button>
                     </div>
 </div>
  
 <div id="page12">
+      
+      <div id="iceSkate" style="display:block">
+                <img src="http://wac.450f.edgecastcdn.net/80450F/103gbfrocks.com/files/2011/12/550B81EA-8A08-4CE4-A168-8F49D61F75E4santaSkate.gif" alt="Santa Skating">
+      </div>
       
           <p> The Ice Rink has an area of 300 square meters and a perimeter of 80 meters. What is the length  of the Rink?</p>
         <input id="answer6" type="text"> <p> meters </p>
@@ -534,6 +543,10 @@
  </div>
       
 <div id="page13">
+      
+      <div id="scaredPic" sryle="display:block">
+                <img src="http://4.bp.blogspot.com/-rc_3m40xSqM/UNfUkZvE-xI/AAAAAAAACC4/415FNsWkjf0/s1600/French+Girl.jpg" alt="Baby Scared of Santa" width="150" height="133.4">
+      </div>
       
           <p> What do you call people that are afraid of Santa Clause?</p>
         <input id="answer7" type="text"> 
